@@ -8,7 +8,7 @@ from dotenv import find_dotenv, load_dotenv
 
 if (__name__ != '__main__'): exit()
 if (len(sys.argv) != 2): exit(1)
-if sys.argv[1] not in Actions: exit(1)
+if sys.argv[1] not in [action.value for action in Actions]: exit(1)
 
 load_dotenv(find_dotenv())
 
